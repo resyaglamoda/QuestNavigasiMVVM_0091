@@ -26,3 +26,23 @@ import androidx.compose.ui.unit.dp
 
 import com.example.myapplication6.R
 
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun FormIsian(
+    jenis: List<String> = listOf("Laki-laki", "Perempuan"),
+    onSubmitBtnClick: () -> Unit
+) {
+    val jenisK = jenis
+
+    Scaffold(
+        modifier = Modifier,
+        topBar = {
+            TopAppBar(
+                title = { Text(text = "Form Isian") },
+                colors = TopAppBarDefaults.mediumTopAppBarColors(
+                    containerColor = colorResource(id = R.color.teal_700)
+                )
+            )
+        }
+
+
