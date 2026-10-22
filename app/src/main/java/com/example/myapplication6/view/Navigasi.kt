@@ -9,3 +9,18 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 
+enum class Navigasi {
+    FormulirSaya,
+    Detail
+}
+
+@Composable
+fun DataApp(
+    navController: NavHostController = rememberNavController()
+) {
+    Scaffold { isiRuang ->
+        NavHost(
+            navController = navController,
+            startDestination = Navigasi.FormulirSaya.name,
+            modifier = Modifier.padding(paddingValues = isiRuang)
+        ) {
