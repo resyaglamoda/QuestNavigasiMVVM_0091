@@ -44,5 +44,20 @@ fun FormIsian(
                 )
             )
         }
+    ) { isiRuang ->
+        Column(
+            modifier = Modifier.padding(isiRuang),
+            verticalArrangement = Arrangement.Top,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            OutlinedTextField(
+                value = "",
+                onValueChange = {},
+                singleLine = true,
+                modifier = Modifier
+                    .padding(top = 28.dp)
+                    .width(250.dp)
+            )
+
 
 
